@@ -18,7 +18,7 @@ public class Grid : MonoBehaviour {
 		{
 			for(int n = 0; n < L; n++)
 			{
-				Quadrado.transform.position = new Vector3((-10f + 1.85f*i),0, -10f - 1.85f*n);
+				Quadrado.transform.position = new Vector3((-10f + 3f*i),0, -10f - 3f*n);
 				Instantiate(Quadrado);
 			}
 		}
