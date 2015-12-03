@@ -5,7 +5,8 @@ public class Grid : MonoBehaviour {
 
 	public GameObject Tile;
 	public GameObject canvas;
-	
+	public int navios = 5;
+
 	void Start()
 	{
 		Instanciar (5, 5, 4 - 1.65f, 4 - 1.65f);
