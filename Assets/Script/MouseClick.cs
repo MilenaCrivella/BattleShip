@@ -14,23 +14,24 @@ public class MouseClick : MonoBehaviour {
 	
 	public void ChangeColor()
 	{
-		GameObject outro = GameObject.Find("Outro");
-		Grid grid = outro.GetComponent<Grid> ();
+		//GameObject outro = GameObject.Find("Outro");
+		//Grid grid = outro.GetComponent<Grid> ();
 		
 		
-		if (!clicked && grid.navios > 0) {
+		if (!clicked) {
 			
 			clicked = true;
 			this.gameObject.GetComponent<Image> ().color = Color.red;
-			grid.navios -= 1;
-			Debug.Log(grid.navios);
+			//grid.navios -= 1;
+			//Debug.Log(grid.navios);
 			
-		} else if (clicked) {
+		} /*else if (clicked) {
 			
 			clicked = false;
 			this.gameObject.GetComponent<Image> ().color = Color.white;
-			grid.navios += 1;
-			
-		}
+			//grid.navios += 1;
+			}
+			*/
+
 	}
 }
