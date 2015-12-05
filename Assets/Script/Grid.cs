@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Grid : MonoBehaviour {
 
 	public GameObject Tile;
 	public GameObject canvas;
-	public int navios = 5;
+	public GameObject instTile;
+	int number = 0;
+	public int type = 1;
 
 	void Start()
 	{
@@ -21,8 +24,16 @@ public class Grid : MonoBehaviour {
 			{
 				Tile.transform.position = new Vector2((point_x + i * 480),point_y + n * 82);
 				Tile.SetActive(true);
-				var instTile = Instantiate(Tile) as GameObject;
+				instTile = Instantiate(Tile) as GameObject;
 				instTile.transform.SetParent(canvas.transform, false);
+				number++;
+				instTile.name = "Tile" + "_" + number + "_" + type;
+
+				if(number >= 25)
+				{
+					number = 0;
+					type = 2;
+				}
 			}
 		}
 	}

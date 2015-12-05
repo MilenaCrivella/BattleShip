@@ -3,8 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class MouseClick : MonoBehaviour {
-	
-	
+
 	private bool clicked;
 	
 	void Start () 
@@ -16,22 +15,10 @@ public class MouseClick : MonoBehaviour {
 	{
 		//GameObject outro = GameObject.Find("Outro");
 		//Grid grid = outro.GetComponent<Grid> ();
-		
-		
-		if (!clicked) {
-			
-			clicked = true;
-			this.gameObject.GetComponent<Image> ().color = Color.red;
-			//grid.navios -= 1;
-			//Debug.Log(grid.navios);
-			
-		} /*else if (clicked) {
-			
-			clicked = false;
-			this.gameObject.GetComponent<Image> ().color = Color.white;
-			//grid.navios += 1;
-			}
-			*/
+
+			if (!clicked) {
+				this.gameObject.GetComponent<Image> ().color = Color.red;
+			} 
 
 	}
 }
