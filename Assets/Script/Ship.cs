@@ -5,12 +5,21 @@ public class Ship : MonoBehaviour {
 
 	float x;
 	float y;
+	bool Soltar = false;
+	Transform currentTarget = null;
 
 	void Update()
 	{
 		x = Input.mousePosition.x;
 		y = Input.mousePosition.y;
+	}
 
+	void OnMouseUp ()
+	{
+		if (currentTarget != null)
+		{
+			transform.position = currentTarget.position;
+		}
 	}
 
 	void OnMouseDrag ()
@@ -20,9 +29,9 @@ public class Ship : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		if (coll.gameObject.name.Equals("Tile_1_1"))
-		{
-			Debug.Log("ok");
-		}
+			if (coll.gameObject.name.Equals ("Tile_1")) {
+
+				currentTarget = coll.transform;
+			} 
 	}
 }
