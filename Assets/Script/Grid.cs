@@ -8,7 +8,7 @@ public class Grid : MonoBehaviour {
 	public GameObject canvas;
 	public GameObject instTile;
 	int number = 0;
-	public int type = 1;
+	int type = 1;
 
 	void Start()
 	{
@@ -27,13 +27,14 @@ public class Grid : MonoBehaviour {
 				instTile = Instantiate(Tile) as GameObject;
 				instTile.transform.SetParent(canvas.transform, false);
 				number++;
-				instTile.name = "Tile" + "_" + number + "_" + type;
+				instTile.name = "Tile" + "_" + type;
 
 				if(number >= 25)
 				{
 					number = 0;
 					type = 2;
 				}
+
 			}
 		}
 	}
