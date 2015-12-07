@@ -16,8 +16,8 @@ public class Ship : MonoBehaviour {
 
 	void OnMouseUp ()
 	{
-		if (currentTarget != null)
-		{
+		Soltar = true;
+		if (currentTarget != null) {
 			transform.position = currentTarget.position;
 		}
 	}
@@ -25,13 +25,13 @@ public class Ship : MonoBehaviour {
 	void OnMouseDrag ()
 	{
 		transform.position = Camera.main.ScreenToWorldPoint (new Vector3 (x, y, 100.0f));
+		Soltar = false;
 	}
 
 	void OnTriggerStay2D(Collider2D coll)
 	{
 		if (coll.gameObject.name.Equals ("Tile_1")) {
-
 			currentTarget = coll.transform;
-		} 
+		}
 	}
 }
