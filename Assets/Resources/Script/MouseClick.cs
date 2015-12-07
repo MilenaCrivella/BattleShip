@@ -18,10 +18,10 @@ public class MouseClick : MonoBehaviour {
 		                          this.gameObject.transform.position.y / 2,
 		                          this.gameObject.transform.position.z);
 	}
-	
+
 	public void ChangeColor() {
 		if (!clicked) {
-			if(gameObject.tag.Equals("Tile")) {
+			if(gameObject.name.Equals("Tile_2")) {
 				this.gameObject.GetComponent<Image> ().color = Color.white;
 			}
 		} 

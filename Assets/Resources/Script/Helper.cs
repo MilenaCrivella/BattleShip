@@ -8,8 +8,8 @@ public class Helper : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D coll) {
-		if (coll.gameObject.tag.Equals ("Tile")) {
-			// Bolinha tocando tile
+		if (coll.gameObject.name.Equals ("Tile_1")) {
+
 		}
 	}
 }

@@ -30,7 +30,7 @@ public class Ship : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D coll)
 	{
-		if (coll.gameObject.tag.Equals ("Tile")) {
+		if (coll.gameObject.name.Equals ("Tile_1")) {
 			currentTarget = coll.transform;
 		}
 	}
