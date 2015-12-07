@@ -13,8 +13,10 @@ public class MouseClick : MonoBehaviour {
 	public void ChangeColor()
 	{
 			if (!clicked) {
+				if(gameObject.name.Equals("Tile_2"))
+				{
 					this.gameObject.GetComponent<Image> ().color = Color.red;
-					Debug.Log("cool");
+				}
 			} 
 	}
 	
