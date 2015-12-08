@@ -11,19 +11,20 @@ public class ConnectionManager : MonoBehaviour {
 	public InputField passObj;
 	public Text error;
 	public Text message;
-	private GameObject gameCanvas;
+	private Canvas gameCanvas;
 	public Button loginBtn;
 	public Button registerBtn;
 
 	void Start () {
 		isLogged = 3;
 		db_url = "https://batteship-db-jrflga.c9users.io/";
-		gameCanvas = Resources.Load ("Prefab/GameCanvas") as GameObject;
+		gameCanvas = Resources.Load ("Prefab/GameCanvas") as Canvas;
 	}
 
 	void Update () {
 		if (isLogged == 1) {
-			Instantiate (gameCanvas);
+			gameCanvas.planeDistance = 100;
+			gameCanvas.sortingOrder = 1;
 			isLogged = 3;
 		}
 		if (isLogged == 0)
@@ -59,6 +60,7 @@ public class ConnectionManager : MonoBehaviour {
 
 	IEnumerator LoginUser() {
 		if(!CheckConnection(db_url)) {
+			Debug.Log("Oi");
 			WWWForm form = new WWWForm();
 			form.AddField("login", loginObj.text);
 			form.AddField("pass", passObj.text);
