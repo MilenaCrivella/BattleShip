@@ -6,20 +6,26 @@ using UnityEngine.UI;
 public class ConnectionManager : MonoBehaviour {
 
 	private string db_url;
+	private int isLogged;
 	public InputField loginObj;
 	public InputField passObj;
 	public Text error;
-	private int isLogged;
 	public Text message;
+	private GameObject gameCanvas;
+	public Button loginBtn;
+	public Button registerBtn;
 
 	void Start () {
 		isLogged = 3;
 		db_url = "https://batteship-db-jrflga.c9users.io/";
+		gameCanvas = Resources.Load ("Prefab/GameCanvas") as GameObject;
 	}
 
 	void Update () {
-		if (isLogged == 1)
-			Application.LoadLevel (1);
+		if (isLogged == 1) {
+			Instantiate (gameCanvas);
+			isLogged = 3;
+		}
 		if (isLogged == 0)
 			error.text = "Wrong login or password!";
 	}
@@ -41,10 +47,14 @@ public class ConnectionManager : MonoBehaviour {
 
 	public void Connect() {
 		StartCoroutine (LoginUser ());
+		loginBtn.interactable = false;
+		registerBtn.interactable = false;
 	}
 
 	public void Register() {
 		StartCoroutine (RegisterUser ());
+		loginBtn.interactable = false;
+		registerBtn.interactable = false;
 	}
 
 	IEnumerator LoginUser() {

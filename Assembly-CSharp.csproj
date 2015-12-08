@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Resources\Prefab\Faders\Fader_Behaviour.cs" />
+     <Compile Include="Assets\Resources\Script\BarManager.cs" />
      <Compile Include="Assets\Resources\Script\ColliderShip.cs" />
      <Compile Include="Assets\Resources\Script\ConnectionManager.cs" />
      <Compile Include="Assets\Resources\Script\Grid.cs" />
