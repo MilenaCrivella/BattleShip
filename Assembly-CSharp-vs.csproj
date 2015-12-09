@@ -54,6 +54,7 @@
      <Compile Include="Assets\Resources\Script\Helper.cs" />
      <Compile Include="Assets\Resources\Script\MouseClick.cs" />
      <Compile Include="Assets\Resources\Script\Ship.cs" />
+     <Compile Include="Assets\Resources\Script\WebAsync.cs" />
      <None Include="Assets\Resources\Prefab\Credits.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.5/UnityEngine.UI.dll</HintPath>

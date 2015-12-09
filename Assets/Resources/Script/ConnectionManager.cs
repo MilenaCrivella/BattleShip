@@ -15,6 +15,12 @@ public class ConnectionManager : MonoBehaviour {
 	public Button loginBtn;
 	public Button registerBtn;
 
+	static public ConnectionManager Instance;
+
+	void Awake () {
+		Instance = GetComponent<ConnectionManager>();
+	}
+
 	void Start () {
 		isLogged = 3;
 		db_url = "https://batteship-db-jrflga.c9users.io/";
@@ -70,6 +76,17 @@ public class ConnectionManager : MonoBehaviour {
 		} else {
 			yield return LoginUser ();
 		}
+
+		/*
+		bool foundURL;
+		yield return Instance.StartCoroutine(WebAsync.CheckForMissingURL((db_url + "loginManager.php"), value => foundURL = !value));
+		*/
+
+		/* RETURNS BOOL
+		 * 
+		 * Do we need to read the website's content? Can't we work this out?
+		 */
+
 	}
 
 	IEnumerator RegisterUser() {

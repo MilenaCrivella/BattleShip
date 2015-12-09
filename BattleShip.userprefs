@@ -1,7 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Script\ConnectionManager.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Script\WebAsync.cs">
     <Files>
+<<<<<<< HEAD
       <File FileName="Assets\Resources\Script\Ship.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Script\MouseClick.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Script\ConnectionManager.cs" Line="26" Column="1" />
@@ -9,6 +10,10 @@
       <File FileName="Assets\Resources\Script\Helper.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Prefab\Faders\Fader_Behaviour.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Script\BarManager.cs" Line="1" Column="1" />
+=======
+      <File FileName="Assets\Resources\Script\ConnectionManager.cs" Line="17" Column="2" />
+      <File FileName="Assets\Resources\Script\WebAsync.cs" Line="21" Column="2" />
+>>>>>>> origin/master
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
