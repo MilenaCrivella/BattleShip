@@ -48,12 +48,9 @@
   <ItemGroup>
      <Compile Include="Assets\Resources\Prefab\Faders\Fader_Behaviour.cs" />
      <Compile Include="Assets\Resources\Script\BarManager.cs" />
-     <Compile Include="Assets\Resources\Script\ColliderShip.cs" />
      <Compile Include="Assets\Resources\Script\ConnectionManager.cs" />
-     <Compile Include="Assets\Resources\Script\Grid.cs" />
-     <Compile Include="Assets\Resources\Script\Helper.cs" />
-     <Compile Include="Assets\Resources\Script\MouseClick.cs" />
-     <Compile Include="Assets\Resources\Script\Ship.cs" />
+     <Compile Include="Assets\Resources\Script\GameManager.cs" />
+     <Compile Include="Assets\Resources\Script\Tile.cs" />
      <Compile Include="Assets\Resources\Script\WebAsync.cs" />
      <None Include="Assets\Resources\Prefab\Credits.txt" />
  <Reference Include="UnityEngine.UI">

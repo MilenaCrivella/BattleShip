@@ -11,9 +11,9 @@ public class ConnectionManager : MonoBehaviour {
 	public InputField passObj;
 	public Text error;
 	public Text message;
-	private Canvas gameCanvas;
 	public Button loginBtn;
 	public Button registerBtn;
+	private GameObject gameWindow;
 
 	static public ConnectionManager Instance;
 
@@ -24,13 +24,15 @@ public class ConnectionManager : MonoBehaviour {
 	void Start () {
 		isLogged = 3;
 		db_url = "https://batteship-db-jrflga.c9users.io/";
-		gameCanvas = Resources.Load ("Prefab/GameCanvas") as Canvas;
+		gameWindow = Resources.Load ("Prefab/GameWindow") as GameObject;
 	}
 
 	void Update () {
 		if (isLogged == 1) {
-			gameCanvas.planeDistance = 100;
-			gameCanvas.sortingOrder = 1;
+			Instantiate(gameWindow);
+			GameObject.Find("GameWindow(Clone)").transform.parent = GameObject.Find("Canvas").transform;
+			GameObject.Find("GameWindow(Clone)").transform.localScale = new Vector3 (60, 60, 1);
+			GameObject.Find("GameWindow(Clone)").transform.localPosition = new Vector3 (450, 300, 1);
 			isLogged = 3;
 		}
 		if (isLogged == 0)
